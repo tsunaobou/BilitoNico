@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BiliToNicoTube
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Automatic Redirect from Bilibili to Niconico or Youtube Source video.
 // @author       Tsunaobou
 // @match        https://www.bilibili.com/video/*
@@ -9,7 +9,6 @@
 // @grant        none
 // ==/UserScript==
 
-//なぜかF5を押さないと動かない問題がある
 window.addEventListener('DOMContentLoaded', function() { //ロード時に実行
     let re = new RegExp('sm[0-9]{1,9}') //ニコ動の動画IDを正規表現パターンとする
     let re_second = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/; //Youtubeの動画URLを正規表現パターンとする
